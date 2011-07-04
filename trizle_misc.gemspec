@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{trizle_misc}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Your Name}]
@@ -17,10 +17,18 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
+    "app/controllers/ribbons_controller.rb",
     "app/helpers/trizle_misc_helper.rb",
     "app/models/collection.rb",
     "app/models/fan.rb",
     "app/models/ribbon.rb",
+    "app/views/ribbons/_form.html.erb",
+    "app/views/ribbons/_sidebar.html.erb",
+    "app/views/ribbons/_sidebar_list.html.erb",
+    "app/views/ribbons/edit.html.erb",
+    "app/views/ribbons/index.html.erb",
+    "app/views/ribbons/new.html.erb",
+    "app/views/ribbons/show.html.erb",
     "config/recurly.yml",
     "config/routes.rb",
     "lib/trizle_misc.rb"
