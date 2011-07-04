@@ -9,7 +9,7 @@ class BusinessRibbon < ActiveRecord::Base
 
   after_create :after_create_tasks
   def after_create_tasks
-    business.add_notification("You've achieved the ribbon #{name}.", "/", User.find_by_login("trizle"))
+    business.notifications(:title => "You've achieved the ribbon #{name}.")
   end
 
 
