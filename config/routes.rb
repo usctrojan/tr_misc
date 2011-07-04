@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # that's what you'll be doing here, but I thought I'd let you know.
 
   resources :ribbons
+  resources :collections
 end
  

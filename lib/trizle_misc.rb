@@ -28,4 +28,15 @@ module TrizleMisc
 
   # This is used in Rakefile.  Adjust as you see fit.
   Version = '1.0.0'
+
+
+  # to extend models (e.g. if you want to put a user model inside your app)
+  def self.root
+    File.expand_path(File.dirname(File.dirname(__FILE__)))
+  end
+
+  def self.models_dir
+    "#{root}/app/models"
+  end
+
 end

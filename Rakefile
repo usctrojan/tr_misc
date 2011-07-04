@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "trizle_misc"
   gem.homepage = "http://github.com/usctrojan/trizle_misc"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{for not as important stuff as the stuff in trizle client}
+  gem.description = %Q{longer description of your gem}
   gem.email = "abtrinh@gmail.com"
   gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*"]
   gem.authors = ["Your Name"]

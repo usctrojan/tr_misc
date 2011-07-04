@@ -1,6 +1,3 @@
-<% content_for :subnavigation do %>
-  <%= render "trizlers/subnavigation" %>
-<% end %>
 
 
 
@@ -11,7 +8,7 @@
 
 
 <div class="boost_headline">
-  <%= cartoon("cartoon21.png", :class => "") %>
+  <%#= cartoon("cartoon21.png", :class => "") %>
   <div class="boost_content">
     <% cache("ribbons-size", :expires_in => 1.week) do %>
     <h4>Collect All <%= pluralize Ribbon.all.size, "Ribbon" %></h4>
@@ -23,7 +20,7 @@
   <%= clear %>
 </div>
 <div class="boost_section top bottom">
-  <%= cartoon("cartoon21.png", :class => "") %>
+  <%#= cartoon("cartoon21.png", :class => "") %>
   <div class="boost_content">
     <h4>See your ribbons</h4>
     Pixel perfect design & finely tuned development combined with efficient processes are foundational elements in each and every project I take on. View Recent Projects
