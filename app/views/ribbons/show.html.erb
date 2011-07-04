@@ -1,0 +1,33 @@
+<% content_for :subnavigation do %>
+<%= render "trizlers/subnavigation" %>
+<% end %>
+
+<div class="content with_sidebar">
+
+  <h1>
+     <%=h @ribbon.name %> Ribbon
+  </h1>
+
+
+<p>
+  <b>Points:</b>
+  <%=h @ribbon.points %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @ribbon.description %>
+</p>
+
+
+</div>
+
+
+<% content_for :sidebar do %>
+
+  <% unless @ribbon.level? %>
+  <h3>Collection</h3>
+  <%= link_to @ribbon.collection_name, collection_path(:id => @ribbon.collection_name) %>
+  <% end %>
+
+<% end %>

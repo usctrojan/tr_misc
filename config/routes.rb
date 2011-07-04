@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # use namespaces in a route file within an engine.  It doesn't seem like
   # that's what you'll be doing here, but I thought I'd let you know.
 
+  resources :ribbons
 end
  

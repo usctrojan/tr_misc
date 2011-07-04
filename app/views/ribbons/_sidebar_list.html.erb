@@ -1,0 +1,10 @@
+
+<h3><%= pluralize ribbons.length, "Ribbon" %></h3>
+<div class="thumb_list">
+<ul class="thumbs">
+  <% for ribbon in ribbons[0..19] %>
+  <li><%= photo(ribbon.image, "utility") %></li>
+  <% end %>
+</ul>
+<%= clear %>
+</div>

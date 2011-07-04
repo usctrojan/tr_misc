@@ -1,0 +1,31 @@
+
+<%= semantic_form_for(@ribbon, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.inputs do %>
+  
+    
+    <%= f.input :name %>
+  
+  
+    
+    <%= f.input :points %>
+  
+  
+
+    <%= f.input :description %>
+
+    <li>
+      <%= f.label :collection_id %>
+    <%= f.collection_select :collection_id, Collection.all, :id, :name %>
+    </li>
+
+
+<%= li_file_field(f, :image) %>
+<%= li_file_field(f, :large_image) %>
+  
+  
+    <%= f.buttons %>
+<% end %>
+  
+<% end %>

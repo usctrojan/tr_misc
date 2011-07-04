@@ -1,0 +1,48 @@
+<% content_for :subnavigation do %>
+  <%= render "trizlers/subnavigation" %>
+<% end %>
+
+
+
+
+
+<div class="content with_sidebar">
+
+
+
+<div class="boost_headline">
+  <%= cartoon("cartoon21.png", :class => "") %>
+  <div class="boost_content">
+    <% cache("ribbons-size", :expires_in => 1.week) do %>
+    <h4>Collect All <%= pluralize Ribbon.all.size, "Ribbon" %></h4>
+    <% end %>
+    <span>
+      You have <%= raw link_to(pluralize(current_business.ribbons.size, "ribbon"), ribbons_path) %>. See what quests you can do and other ways to get points to get ribbons. Here's a sampling of things you can do.
+    </span>
+  </div>
+  <%= clear %>
+</div>
+<div class="boost_section top bottom">
+  <%= cartoon("cartoon21.png", :class => "") %>
+  <div class="boost_content">
+    <h4>See your ribbons</h4>
+    Pixel perfect design & finely tuned development combined with efficient processes are foundational elements in each and every project I take on. View Recent Projects
+    <ol>
+    <% @ribbons.each do |ribbon| %>
+      <li>
+        <%= link_to ribbon.name, ribbon, :class => "title" %>
+        <%= " · You have this!" if current_business.business_ribbons.collect(&:ribbon_id).include?(ribbon.id) %>
+      </li>
+    <% end %>
+  </ol>
+  </div>
+  <%= clear %>
+</div>
+
+
+
+
+</div>
+
+
+<%= render "ribbons/sidebar" %>

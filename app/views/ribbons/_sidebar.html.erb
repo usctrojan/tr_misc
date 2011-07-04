@@ -1,0 +1,23 @@
+
+<% content_for :sidebar do %>
+  <div class="content">
+    <% if admin? %>
+      <div class="button">
+        <%= link_to 'New ribbon', new_ribbon_path %>
+      </div>
+    <% end %>
+
+    <h3>Collections</h3>
+  <ul class="nav">
+      <li><%= link_to_unless_current "View collections", collections_path %></li>
+  </ul>
+    <h3>Ribbons</h3>
+    <ul class="nav">
+      <li><%= link_to_unless_current "Ribbons", "/trizle/ribbons?level=false" %></li>
+      <li><%= link_to_unless_current "Level ribbons", "/trizle/ribbons?level=true" %></li>
+    </ul>
+
+      <%= render "trizle_sections/partials/achievements_nav" %>
+
+  </div>
+<% end %>
